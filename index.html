@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nìm Nguyễn Quán Quân – Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header container">
+    <a class="logo" href="#">Quán Quân</a>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="#about">Giới thiệu</a></li>
+        <li><a href="#skills">Kỹ năng</a></li>
+        <li><a href="#projects">Dự án</a></li>
+        <li><a href="#contact">Liên hệ</a></li>
+        <li><button id="theme-toggle">Dark mode</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="about" class="hero">
+      <div>
+        <h1>Xin chào, mình là Quân</h1>
+        <p class="subtitle">Sinh viên Kỹ thuật, Internet of Things (IoT) và Lập trình Nhúng.</p>
+        <p>Với niềm đam mê lớn dành cho các hệ thống phần cứng và khả năng giao tiếp của chúng với thế giới phần mềm, mình luôn thích thú trong việc thiết kế vi mạch, lập trình vi điều khiển và xây dựng ứng dụng web quản lý dữ liệu cảm biến.</p>
+        <a class="button" href="#projects">Xem dự án</a>
+        <a class="button button-outline" href="#contact">Liên hệ ngay</a>
+      </div>
+      <img src="https://api.dicebear.com/7.x/initials/svg?seed=N+Q" alt="Ảnh chân dung Quán Quân" class="avatar-img">
+    </section>
+
+    <div class="two-col-layout">
+      <section id="skills">
+        <h2>Kỹ năng & Công cụ</h2>
+        <ul class="chip-list">
+          <li>C/C++ (Nhúng)</li>
+          <li>STM32 & Arduino</li>
+          <li>Thiết kế mạch Proteus / Altium</li>
+          <li>Python (Data/Serial)</li>
+          <li>HTML, CSS, JavaScript</li>
+          <li>Git & GitHub</li>
+        </ul>
+      </section>
+
+      <section id="education">
+        <h2>Học vấn</h2>
+        <article class="edu-item">
+          <h3>Đại học Khoa học Tự nhiên, ĐHQG-HCM</h3>
+          <p class="edu-time">2023 – Nay</p>
+          <p>Sinh viên ngành Vật lý – Vật lý Kỹ thuật, chuyên ngành Vật lý Tin học. Tham gia các nhóm nghiên cứu và bài tập lớn về hệ thống nhúng (Embedded Systems) và IoT.</p>
+        </article>
+      </section>
+    </div>
+
+    <section id="projects">
+      <h2>Các dự án nổi bật</h2>
+      <p>Dưới đây là một số dự án thực tế mình đã thực hiện qua các môn học và đam mê cá nhân.</p>
+      
+      <div id="filters"></div>
+      <input id="search" placeholder="Tìm kiếm dự án theo tên..." />
+      
+      <ul id="project-list" class="projects"></ul>
+      
+      <template id="project-card">
+        <li class="card">
+          <h3></h3>
+          <p class="desc"></p>
+          <p class="tags"></p>
+        </li>
+      </template>
+    </section>
+
+    <section id="contact">
+      <h2>Thông tin liên hệ</h2>
+      <p>Bạn có thể để lại lời nhắn, mình sẽ phản hồi sớm nhất qua email.</p>
+      <form id="contact-form" novalidate>
+        <div class="field">
+          <label for="name">Họ và tên</label>
+          <input id="name" name="name" required>
+          <p class="error" id="name-error"></p>
+        </div>
+        <div class="field">
+          <label for="email">Địa chỉ Email</label>
+          <input id="email" type="email" name="email" required>
+          <p class="error" id="email-error"></p>
+        </div>
+        <div class="field">
+          <label for="msg">Lời nhắn của bạn</label>
+          <textarea id="msg" name="msg" rows="4"></textarea>
+        </div>
+        <button class="button">Gửi tin nhắn</button>
+        <p id="form-success" class="ok"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="container">
+    <p>© 2026 Nìm Nguyễn Quán Quân</p>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
